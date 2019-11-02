@@ -1,0 +1,47 @@
+body{
+	background-color: #bfabf357;
+	font-family: 'Roboto', sans-serif;;
+}
+
+
+
+.card{
+	background-color: white;
+	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+
+
+input,textarea{
+	width: 100%;
+	border-radius: 0.5rem;
+	border: 1px solid lightblue;
+	text-align: center;
+}
+
+
+button{
+	margin-left: 26%;
+	width: 75%;
+	border-radius: 0.5rem;
+}
+
+
+.event-card{
+	background-color: white;
+	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+	border-radius: 0.5rem;
+	border: 1px solid lightblue;
+}
+
+@media only screen and (max-width: 575px) {
+  .card{
+  	margin-top: 0;
+  }
+  .form-group-btn button{
+	width: 100%;
+  }
+  .form-group-btn {
+  	padding-left: 3%;
+  }
+}

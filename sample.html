@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+details {
+  font: 16px "Open Sans", "Arial", sans-serif;
+  width: 620px;
+}
+details >summary.nochild
+{
+list-style-type:square;
+}
+</style>
+        
+</head>
+<body>
+<form action="/action_page.php" >
+        <details>
+                <summary>1</summary>
+                <ul style="list-style-type:none;">
+                        <li><details>
+                                        <summary class="nochild"><input type="checkbox" name="d" value="x"> 1.1<br></summary>
+                        </li>
+                        <li>
+                                <details>
+                                        <summary>1.2</summary>
+                                        <ul style="list-style-type:none;">
+                                                <li><input type="checkbox" name="d" value="y">1.2.1<br></li>
+                                        </ul>
+                                </details>
+                        </li>
+                        <li>
+                                <details>
+                                        <summary class="nochild"><input type="checkbox" name="d" value="p">1.3<br></summary>
+                                </details>
+
+                        </li>
+                </ul>
+        </details>
+         <input type="submit" value="Submit">
+</form>
+</body>
+</html>
