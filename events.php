@@ -80,6 +80,7 @@
         	}
 
         }
+        
             $j = 0;
             $eid = array();
             for($i=0; $i < count($ebid); $i ++)
@@ -94,7 +95,9 @@
                     }
                 }
             }
-            $eid=array_unique($eid,SORT_NUMERIC);
+            $eid=array_values(array_unique($eid,SORT_NUMERIC));
+            
+            
             // for($i=0; $i < count($eid); $i ++)
             // {
             //     echo "<h1>".$eid[$i]."</h1>";
@@ -120,8 +123,11 @@
                     $row = mysqli_fetch_assoc($result);
             ?>
                 <div class="row">
-                    <div class="col-8 border border-primary text-center mx-auto event-card">
-                        <h4><?php echo $row["ename"] ?></h4>
+                    <div class="col-8 border border-primary text-center mx-auto event-card"> 
+                        <div class="d-flex justify-content-between">
+                            <h4><?php echo $row["ename"] ?></h4>
+                            <p> <?php echo $row["edate"]; ?></p>
+                        </div>
                         <p><?php echo $row["edesc"] ?></p>
                     </div>
                 </div>
