@@ -32,10 +32,21 @@
                 $('#datetimepicker1').datetimepicker();
             });
         </script>
+	<style>
+		nav.bg-custom{
+			background-color:#FFFFFF;
+		}
+		section.sticky-top{
+			position: sticky;
+			top: 0;
+			z-index: 1020;
+		}
+	</style>
 </head>
 <body>
-	<section id="Header">
-        <nav class="navbar navbar-expand-sm navbar-light  font-weight-normal pt-0" style="background-color: rgba(208, 245, 245, 0.747)">
+	<section class="sticky-top" id="Header">
+        <nav class="navbar navbar-expand-sm navbar-light bg-custom sticky-top font-weight-normal">
+	    <!--Previous navbar color: background-color: rgba(208, 245, 245, 0.747)-->
             <a class="navbar-brand" href="home.php">IIEST<strong>Bulletin</strong></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
