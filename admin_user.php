@@ -7,8 +7,8 @@
 		<title> admin</title>
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     	<link rel="stylesheet" type="text/css" href="css/admin_user.css">
-    	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-    	<script src="https://kit.fontawesome.com/a8f317beae.js" crossorigin="anonymous"></script>
+    	<link href="https://fonts.googleapis.com/css?family=Alegreya|B612|Sail|Roboto&display=swap" rel="stylesheet"/>
+	<script src="https://kit.fontawesome.com/a8f317beae.js" crossorigin="anonymous"></script>
 
     	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 
@@ -32,6 +32,11 @@
                 $('#datetimepicker1').datetimepicker();
             });
         </script>
+	<style>
+		body{
+			font-family:'Alegreya','B612',courier,arial,helvetica;
+		}
+	</style>
 </head>
 <body>
 	<section id="Header">
