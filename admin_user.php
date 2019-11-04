@@ -34,6 +34,8 @@
         </script>
 </head>
 <body>
+	<!--wrap div begins: the entire page excluding footer is wrapped around with this-->
+	<div id="wrap">
 	<section id="Header">
         <nav class="navbar navbar-expand-sm navbar-light  font-weight-normal pt-0" style="background-color: rgba(208, 245, 245, 0.747)">
             <a class="navbar-brand" href="home.php">IIEST<strong>Bulletin</strong></a>
@@ -160,6 +162,8 @@
 			</div>
 	    </div>
 	</section>
+	</div>
+	<!--wrap div ends here-->
 	<section>
         <div id="Footer" class="d-flex justify-content-center fixed-bottom border-top pt-2">
             <p>© 2019 IIEST<strong>Bulletin</strong></p>
@@ -167,6 +171,11 @@
             <a href="sform.php" class="text-dark pl-2">SignUp</a>
         </div>            
     </section>
+	<script>
+	let h = $('#Footer').height();
+	let wrappingHeight=$(window).height()-h;
+	$('#wrap').css("min-height",wrappingHeight);
+    </script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
