@@ -27,6 +27,11 @@
 			}
 
     	</script>
+        <script type="text/javascript">
+            $(function () {
+                $('#datetimepicker1').datetimepicker();
+            });
+        </script>
 </head>
 <body>
 	<section id="Header">
@@ -97,31 +102,27 @@
                     }
                 }
             }
-          	$eid=array_unique($eid,SORT_NUMERIC);
+          	$eid=array_values(array_unique($eid,SORT_NUMERIC));
     ?>
 
 	<section id="mainBody">
 		<div class="container-fluid">
-			<div class="row">
-				<div class="col-6 card">
+			<div class="row my-4">
+				<div class="col-9 card mx-auto">
+                    <div class="row mx-auto">
+                        <h1>Add Event</h1>
+                    </div>
 					<form action="resources/add_events.php" method="post">
-						<div class="row mb-2">
-							<div class="col-3">
-								<label>Event Id:</label>
-							</div>
-							<div class="col-9">
-								<input type="number" name="eid" required /> 
-							</div>
-						</div>
-						<div class="row mb-2">
+						
+						<div class="row my-3">
 							<div class="col-3">
 								<label>Event Name:</label>
 							</div>
 								<div class="col-9">
-								<input type="text" name="ename" required /> 
+								<input  type="text" name="ename" required /> 
 							</div>
 						</div>
-						<div class="row mb-2">
+						<div class="row my-2">
 							<div class="col-3">
 								<label>Event desc:</label>
 							</div>
@@ -129,12 +130,17 @@
 								<textarea name="edesc"></textarea>  
 							</div>
 						</div>
-						<div class="row mx-auto">
+						<div class="row mx-auto my-auto ">
 							<button type="submit" name="add" class="btn btn-primary"> Add Event </button>
 						</div> 
 					</form>
 				</div>
-				<div class="col-6 card">
+            </div>
+            <div class="row">
+				<div class="col-9 card mx-auto pb-3">
+                    <div class="row mx-auto">
+                        <h1>Delete Event</h1>
+                    </div>
 				<?php 
 	                for($i = 0; $i < count($eid); $i ++)
 	                {
@@ -143,10 +149,9 @@
 	                    $row = mysqli_fetch_assoc($result);
 	            ?>
 	                <div class="row">
-	                    <div class="col-8 text-center mx-auto event-card" id="<?php echo $row["eid"] ?>">
-	                        <h4><?php echo $row["ename"] ?><span onclick="deleteEvent(<?php echo $row["eid"] ?>)" class="ml-5"><i class="fas fa-trash text-danger"></i></span></h4>
-
-
+	                    <div class="col-9 text-center mx-auto event-card mt-3 d-flex justify-content-between pt-2" id="<?php echo $row["eid"] ?>">
+	                        <h4><?php echo $row["ename"] ?></h4>
+                            <span onclick="deleteEvent(<?php echo $row["eid"] ?>)" class="ml-5"><i class="fas fa-trash text-danger"></i></span>
 	                    </div>
 	                </div>
 	            <?php }  ?>
