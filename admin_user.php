@@ -103,7 +103,7 @@
     ?>
 
 	<section id="mainBody">
-		<div class="container-fluid">
+		<div class="container-fluid mb-3">
 			<div class="row my-4">
 				<div class="col-9 card mx-auto">
                     <div class="row mx-auto">
@@ -176,7 +176,7 @@
 
 </div>
 	<section>
-        <div id="Footer" class="d-flex justify-content-center border-top pt-2 mt-3" style="background-color: #FFFFFF">
+        <div id="Footer" class="d-flex justify-content-center border-top pt-2" style="background-color: #FFFFFF">
             <p>© 2019 IIEST<strong>Bulletin</strong></p>
             <a href="login.php" class="text-primary pl-2">Login</a>
             <a href="sform.php" class="text-danger pl-2">SignUp</a>
