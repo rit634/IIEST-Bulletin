@@ -71,7 +71,7 @@
             <ul class="navbar-nav mt-1">
                 <?php if(isset($_SESSION['user'])): ?>
                     <li class="nav-item">
-                        <a id="profile" class="nav-link" href="events.php"><i class="fa fa-user-circle-o fa-2x text-primary" aria-hidden="true"></i></a>
+                        <a id="profile" class="nav-link" href="user.php"><i class="fa fa-user-circle-o fa-2x text-primary" aria-hidden="true"></i></a>
                     </li>
                     <li class="nav-item">
                         <a id="logout" class="nav-link text-white btn btn-danger mr-2 btn-sm-lg" href="logout.php">Logout</a>

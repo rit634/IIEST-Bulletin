@@ -14,9 +14,10 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/home.css">
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya|B612|Sail|Roboto&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     </head>
-  <body>
+<body>
 <div id="wrap">
     <section id="Header">
         <nav class="navbar navbar-expand-sm navbar-light  font-weight-normal pt-0" style="background-color: #FFFFFF;">
@@ -28,7 +29,7 @@
             <ul class="navbar-nav mt-1">
                 <?php if(isset($_SESSION['user'])): ?>
                     <li class="nav-item">
-                        <a id="profile" class="nav-link" href="events.php"><i class="fa fa-user-circle-o fa-2x text-primary" aria-hidden="true"></i></a>
+                        <a id="profile" class="nav-link" href="user.php"><i class="fa fa-user-circle-o fa-2x text-primary" aria-hidden="true"></i></a>
                     </li>
                     <li class="nav-item">
                         <a id="login" class="nav-link text-white btn btn-danger mr-2 btn-sm-lg" href="logout.php">Logout</a>
@@ -49,7 +50,7 @@
         <div class="jumbotron jumbotron-fluid">
             <div class="container">
                 <h1>IIEST Bulletin</h1>
-                <button class="btn btn-primary">Start Searching <strong>EVENTS</strong> Rightway</button>         
+                <button class="btn btn-primary" onclick="window.location.href='board_sel_form.php';">Start Searching <strong>EVENTS</strong> Rightway</button>         
                 
             </div>
         </div>

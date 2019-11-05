@@ -11,6 +11,11 @@
     	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	</head>
 	<body>
+		<section id="Header">
+        	<nav class="navbar navbar-expand-sm navbar-light  font-weight-normal pt-0" style="background-color: #FFFFFF;">
+            	<a class="navbar-brand" href="home.php">IIEST<strong>Bulletin</strong></a>
+          	</nav>
+        </section>
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-9 col-md-7 col-lg-5 mx-sm-auto card">

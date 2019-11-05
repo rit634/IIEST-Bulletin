@@ -1,5 +1,5 @@
 <?php
-	session_start();
+    session_start();
 ?>
 
 
@@ -31,7 +31,7 @@
             <ul class="navbar-nav mt-1">
                 <?php if(isset($_SESSION['user'])): ?>
                     <li class="nav-item">
-                        <a id="profile" class="nav-link" href="events.php"><i class="fa fa-user-circle-o fa-2x text-primary" aria-hidden="true"></i></a>
+                        <a id="profile" class="nav-link" href="user.php"><i class="fa fa-user-circle-o fa-2x text-primary" aria-hidden="true"></i></a>
                     </li>
                     <li class="nav-item">
                         <a id="login" class="nav-link text-white btn btn-danger mr-2 btn-sm-lg" href="logout.php">Logout</a>
@@ -48,14 +48,16 @@
         </div>
         </nav>
     </section>
-   <?php 	
-    	if(isset($_SESSION['user']))
-    	{
-    		$conn = mysqli_connect("localhost","btech2017","btech2017","btech2017");
-            if(mysqli_connect_errno())
-            {
-                echo "Failed to connect to MySQL: " . mysqli_connect_error();
-            }
+   <?php 
+        $conn = mysqli_connect("localhost","btech2017","btech2017","btech2017");
+        if(mysqli_connect_errno())
+        {
+            echo "Failed to connect to MySQL: " . mysqli_connect_error();
+        }
+
+        $flag=0;
+        if(isset($_SESSION['user']))
+        {
             $uid = $_SESSION['user'];
             $sql="select * from x_pref where uid =".$uid.";";
             $result = mysqli_query($conn,$sql);
@@ -67,22 +69,28 @@
                     $ebid [$i] = $row["ebid"];
                     $i ++;
                 }
+                $flag=1;
+            }
+            else
+                $flag=2;
+        }
+        if($flag!=1)
+        {
+            $ebid = array();
+            $i = 0;
+            unset($_POST['add']);
+            foreach($_POST as $x => $x_value)
+            {
+                $ebid[$i] = $x;
+                if($flag==2)
+                {
+                    $sql="INSERT INTO x_pref VALUES({$_SESSION['user']},{$x});";
+                    $result=$conn->query($sql);
+                }
+                $i ++;
             }
         }
-        else
-        {
-        	$conn = mysqli_connect("localhost","btech2017","btech2017","btech2017");
-        	$ebid = array();
-        	$i = 0;
-        	unset($_POST['add']);
-        	foreach($_POST as $x => $x_value)
-        	{
-        		$ebid[$i] = $x;
-        		$i ++;
-        	}
-
-        }
-            
+        
             $j = 0;
             $eid = array();
             for($i=0; $i < count($ebid); $i ++)
@@ -104,21 +112,20 @@
             // {
             //     echo "<h1>".$eid[$i]."</h1>";
             // }
-            
         
     ?> 
-   	<section id="mainBody">
-    		<div class="container-fluid event-board mb-3">
-				 <div class="row">
-				 	<!-- <div class="col-4 d-flex flex-column">
-				 		<p class="text-center pt-1">Filters</p>
-				 		<button class="btn btn-primary btn-sm">Apply</button>
-				 	</div> -->
-				 	<div class="col-8 mx-auto event-card-title mt-2">
-						<h1 class="text-center pt-1 text-primary">Events</h1>
-				 	</div>
-				 </div>
-    		<?php 
+    <section id="mainBody">
+            <div class="container-fluid event-board mb-3">
+                 <div class="row">
+                    <!-- <div class="col-4 d-flex flex-column">
+                        <p class="text-center pt-1">Filters</p>
+                        <button class="btn btn-primary btn-sm">Apply</button>
+                    </div> -->
+                    <div class="col-8 mx-auto event-card-title mt-2">
+                        <h1 class="text-center pt-1 text-primary">Events</h1>
+                    </div>
+                 </div>
+            <?php 
                 for($i = 0; $i < count($eid); $i ++)
                 {
                     $sql="select * from x_events where eid =" . $eid[$i].";"; 
