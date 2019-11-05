@@ -1,6 +1,6 @@
 body{
 	background-color: #bfabf357;
-	font-family: 'Roboto', sans-serif;;
+	font-family:'Alegreya','B612',courier,arial,helvetica;
 }
 
 
@@ -9,7 +9,6 @@ body{
 	background-color: white;
 	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
-
 
 
 input,textarea{
@@ -44,4 +43,8 @@ button{
   .form-group-btn {
   	padding-left: 3%;
   }
+}
+
+span.cur{
+	cursor: pointer;	
 }
