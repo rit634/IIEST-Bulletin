@@ -3,7 +3,17 @@ body{
 	font-family:'Alegreya','B612',courier,arial,helvetica;
 }
 
-
+details >summary.nochild
+{
+	list-style-type: none;
+}
+details > summary.nochild::-webkit-details-marker
+{
+	display: none;
+}
+ul{
+    list-style-type: none;
+}
 
 .card{
 	background-color: white;
@@ -11,13 +21,16 @@ body{
 }
 
 
-input,textarea{
+.input-field,textarea{
 	width: 100%;
 	border-radius: 0.5rem;
 	border: 1px solid lightblue;
 	text-align: center;
 }
-
+.input-text{
+	text-align: left;
+	padding-left: 15px;
+}
 
 button{
 	margin-left: 26%;

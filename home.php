@@ -15,10 +15,11 @@
     <link rel="stylesheet" type="text/css" href="css/home.css">
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  </head>
+    </head>
   <body>
+<div id="wrap">
     <section id="Header">
-        <nav class="navbar navbar-expand-sm navbar-light  font-weight-normal pt-0" style="background-color: rgba(208, 245, 245, 0.747)">
+        <nav class="navbar navbar-expand-sm navbar-light  font-weight-normal pt-0" style="background-color: #FFFFFF;">
             <a class="navbar-brand" href="home.php">IIEST<strong>Bulletin</strong></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -47,21 +48,26 @@
     <section id="MainContent">       
         <div class="jumbotron jumbotron-fluid">
             <div class="container">
-                <h1>IIEST Bulletin<h1>
+                <h1>IIEST Bulletin</h1>
                 <button class="btn btn-primary">Start Searching <strong>EVENTS</strong> Rightway</button>         
                 
             </div>
         </div>
     </section>
-    <div>
-    </div>
+    
+</div>
     <section>
-        <div id="Footer" class="d-flex justify-content-center fixed-bottom border-top pt-2">
+        <div id="Footer" class="d-flex justify-content-center border-top fixed-bottom pt-2" style="background-color: #FFFFFF">
             <p>© 2019 IIEST<strong>Bulletin</strong></p>
-            <a href="login.php" class="text-dark pl-2">Login</a>
-            <a href="sform.php" class="text-dark pl-2">SignUp</a>
+            <a href="login.php" class="text-primary pl-2">Login</a>
+            <a href="sform.php" class="text-danger pl-2">SignUp</a>
         </div>            
     </section>
+    <script>
+        var h = $('#Footer').height();
+        var wrappingHeight=$(window).height()-h;
+        $('#wrap').css("min-height",wrappingHeight);
+    </script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     

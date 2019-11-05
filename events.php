@@ -14,6 +14,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/event.css">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya|B612|Sail|Roboto&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a8f317beae.js" crossorigin="anonymous"></script>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -73,7 +74,7 @@
         	$conn = mysqli_connect("localhost","btech2017","btech2017","btech2017");
         	$ebid = array();
         	$i = 0;
-        	unset($_POST['submit']);
+        	unset($_POST['add']);
         	foreach($_POST as $x => $x_value)
         	{
         		$ebid[$i] = $x;
@@ -81,7 +82,7 @@
         	}
 
         }
-        
+            
             $j = 0;
             $eid = array();
             for($i=0; $i < count($ebid); $i ++)
@@ -103,6 +104,7 @@
             // {
             //     echo "<h1>".$eid[$i]."</h1>";
             // }
+            
         
     ?> 
    	<section id="mainBody">

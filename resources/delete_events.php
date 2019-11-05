@@ -17,7 +17,7 @@
     	}
     	else 
 		{
-    	echo "Error: " . $sql1 . "<br>" . mysqli_error($conn);
+    		echo "Error: " . $sql1 . "<br>" . mysqli_error($conn);
 		}
 	}
 	else 
